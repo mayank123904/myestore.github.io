@@ -1,0 +1,64 @@
+.footer{
+    border: 1px solid black;
+    background-color: #3C2620;
+    color: white;
+    padding-bottom: 1rem;
+    /* margin-bottom: 2rem; */
+    
+}
+.footer>div{
+     text-align: center;
+}
+.footer>div>:nth-child(3){
+    margin-top: -1rem;
+}
+.footer>div>:nth-child(2){
+    font-size: 1.4rem;
+}
+.footer>div>:nth-child(4){
+    margin-top: -1rem;
+    margin-bottom: 2.5rem;
+}
+.tempbar{
+    width: 98%;
+    height: .02rem;
+    background-color: white;
+    margin: auto;
+}
+.footerbottom{
+    display: flex;
+}
+.footerbottom>:nth-child(1){
+    display: flex;
+    margin-top: .4rem;
+}
+.footerbottom>:nth-child(2){
+    display: flex;
+    margin-left: auto;
+}
+.footerbottom>:nth-child(1)>p{
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.footerbottom>:nth-child(2)>p{
+  font-size: 1rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.footerbottom>:nth-child(1)>p:hover{
+    border-bottom: 1px solid yellow;
+    padding-bottom: -1.5rem;
+}
+
+.footerbottom>:nth-child(2)>:nth-child(1){
+  margin-top: 1.5rem;
+}
+.footerbottom>:nth-child(2)>:nth-child(1):hover{
+    border-bottom: 1px solid yellow;
+  }
+.footerbottom>:nth-child(2)>:nth-child(2){
+    border: 1px solid white;
+    padding: .5rem;
+    border-radius: 25px;
+    background-color:#33201b
+}
