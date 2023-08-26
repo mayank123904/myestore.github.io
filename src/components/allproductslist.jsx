@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Featureproductcard from './Featureproduct/featureproductcard';
 import productpic from './images/product1.png';
-import Normalproductcard from './Featureproduct/normalproduct';
+import "./allproductslist.css"
 const Allproducts = () => {
   const [products, setProducts] = useState([]);
 
@@ -22,16 +22,10 @@ const Allproducts = () => {
 
   return (
     <div>
-      <ul style={{display:"flex",marginTop:"4rem"}}>
+      <ul style={{display:"flex",marginTop:"4rem"}}  className='fp'>
         {products.map((product) => (
           <li key={product._id} >
-
-            {product.tag=== 1 ? (
-                 <Featureproductcard productimage={productpic} productalt={product.productname} productname={product.productname} productdiscountprice={"$"+(product.actualprice-(product.actualprice*product.discountpercent)/100)} productactualprice={"$"+product.actualprice} productdiscountpercent={product.discountpercent+"%"}/> 
-            ):(
-                <Normalproductcard productimage={productpic} productalt={product.productname} productname={product.productname} productdiscountprice={"$"+(product.actualprice-(product.actualprice*product.discountpercent)/100)} productactualprice={"$"+product.actualprice} productdiscountpercent={product.discountpercent+"%"}/> 
-            )
-            }
+                 <Featureproductcard productimage={productpic} productalt={product.productname} productname={product.productname} productdiscountprice={"$"+(product.actualprice-(product.actualprice*product.discountpercent)/100)} productactualprice={"$"+product.actualprice} productdiscountpercent={product.discountpercent+"%"} producttag={product.tag}/> 
           </li>
         ))}
       </ul>

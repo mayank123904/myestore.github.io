@@ -10,19 +10,17 @@
     transform: scale(.8);
     margin-top: -3rem;
 }
-.productcontainer>img{
-    width: 20rem;
-    height: 22rem; 
-    border: 1px solid red;
-    border-radius: 20px;
-    cursor: pointer;
+.productcontainer>div{
+    height: 7rem;
 }
-.productcontainer>p{
+.productcontainer>div>p{
     font-size: 1.4rem;
     width: 20rem;
     word-wrap: break-word;
-    margin-top: -.3rem;
+    margin-top: .3rem;
     margin-left: .2rem;
+    height: 3rem;
+
 }
 .productpricecont{
     display: flex;
@@ -53,6 +51,9 @@
     background-color: orangered;
     cursor: pointer;
     border-radius: 5px;
+}
+.productcontainer>button:hover{
+    background-color: rgb(212, 62, 7); 
 }
 .bestseller-overlay{
     width: fit-content;

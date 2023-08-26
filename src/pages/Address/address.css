@@ -1,0 +1,119 @@
+.addresscont{
+    border: 1px solid red;
+    /* background-image: url();
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size:cover; */
+}
+.addressform{
+    border: 1px solid blue;
+    margin-left: 35%;
+    width: 30rem;
+}
+
+.addresscont>span>h1{ 
+    border: 1px solid black;
+    margin-left: 35%;
+    width: fit-content;
+}
+.addressform>p{
+    color: rgb(81, 80, 80);
+    font-size: 1.1rem;
+}
+.addressform>input{
+    width: 90%;
+    height: 2.5rem;
+    border-radius:5px;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    margin-top: -.7rem;
+    border-color: orangered;
+}
+.addressform>button{
+    width: 95%;
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: rgb(81, 80, 80);
+}
+.addresscont>h3{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.savedaddress{
+    margin-top: 1rem;
+    display: flex;
+}
+.savedaddresscont{
+  border: 1px solid yellowgreen;
+  padding: 1rem;
+}
+.savedaddressinnercont{
+    border: 1px solid black;
+    width: 10rem;
+    padding: .5rem;
+    word-wrap: break-word;
+}
+.savedaddressinnercont>span>p{
+border: 1px solid red;
+height: 7rem;
+}
+.savedaddresscont>span>h3{
+    border: 1px solid black;
+}
+.removeaddress{
+    margin-top: .5rem;
+    cursor: pointer;
+    background-color: white;
+    width: 100%;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    border-radius: 5px;
+    border-color: rgb(220, 4, 4);
+}
+.removeaddress:hover{
+    border-color: rgb(70, 2, 70);
+    color: rgb(70, 2, 70);
+}
+.selectaddress{
+    margin-top: .5rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: white;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    border-radius: 5px;
+    border-color: orangered;
+}
+.selectaddress:hover{
+    border-color: rgb(70, 2, 70);
+    color: rgb(70, 2, 70);
+}
+@media only screen and (max-width: 800px){
+.addressform{
+    width: 25rem;
+    margin-left: 15%;
+}
+.addresscont>span>h1{
+    margin-left: 15%;
+}
+/* .addresscont>h3{
+    margin-left: 15%;
+} */
+}
+@media only screen and (max-width: 500px){
+    .addressform{
+        width: 25rem;
+        margin-left: 5%;
+    }
+    .addresscont>span>h1{
+        margin-left: 5%;
+    }
+    /* .addresscont>h3{
+        margin-left: 5%;
+    } */
+ }

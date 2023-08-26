@@ -1,6 +1,6 @@
 
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { toast } from 'react-hot-toast';
 // import { Link } from 'react-router-dom';
 import "./navbar.css"
@@ -13,12 +13,14 @@ import { IoCartOutline } from 'react-icons/io5';
 import {PiSignOutBold} from 'react-icons/pi';
 import {FaLocationDot} from'react-icons/fa6';
 import Popup from '../../Setlocation/setlocation';
+import Categories from '../../Categories/categories';
 function Nav() {
-
+  const location = useLocation();
   const {isAuthenticated,setIsAuthenticated,loading,setLoading,userMobile} = useContext(Context);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -30,6 +32,9 @@ function Nav() {
     setShowPopup(!showPopup);
   };
 
+  const togglecategoryDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
   const logoutHandler=async() =>{
    setLoading(true);
    setShowDropdown(!showDropdown);
@@ -57,15 +62,29 @@ function Nav() {
       </div>
         <div className="intro">
             <img src="https://smartpos.amazon.in/images/6358/51536e48-0e36-4ec9-bffa-afb75ebf0a58_1681454877617.jpg" alt="Logo" />
-            <h3>Cheeni Mitti</h3>
+           <Link to="/" style={{ textDecoration: 'none' }}> <h3 className='title'>Cheeni Mitti</h3></Link>
         </div>
         <div className='bar'>
 
         </div>
         <div className="catalog">
-            <h3>Featured Products</h3>
-            <h3>Categories</h3>
-            <h3>All Products</h3>
+        <Link to="/best-sellers" className={location.pathname === '/best-sellers' ? 'cataloglink active' : 'cataloglink'}><h3 className='cataloglist'>Featured Products</h3></Link>
+        <h3 className='cataloglist' onClick={togglecategoryDropdown}>Categories</h3>
+        {dropdownVisible && (
+          <div style={{marginTop:"4rem",marginLeft:"8rem",position:"absolute"}}>
+            <Categories />
+          </div>
+          
+        )}
+        <Link to="/all-products" className={location.pathname === '/all-products' ? 'cataloglink active' : 'cataloglink'}><h3 className='cataloglist'>All Products</h3></Link>
+        {
+          isAuthenticated ?(
+            <Link to="/orders/my-orders" className={location.pathname === '/orders/my-orders' ? 'cataloglink active' : 'cataloglink'}> <h3 className='cataloglist'>My Orders</h3></Link>
+          ):(
+            <span></span>
+          )
+        }
+        
         </div>
         {
         isAuthenticated ? (<><button className="cart" disabled={loading} ><Link to="/cart"><span style={{color:"white"}}><IoCartOutline/></span></Link></button>

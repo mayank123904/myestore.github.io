@@ -19,8 +19,9 @@
     border-radius: 1rem;
     cursor: pointer;
 }
-.intro>h3{
-    margin-top: .8rem;
+.title{
+    color: white;
+    margin-top: 1rem;
     font-weight: 400;
     font-size: 1rem;
     cursor: pointer;
@@ -39,12 +40,30 @@ width: fit-content;
 cursor: pointer;
 }
 
-.catalog>h3{
+.cataloglist{
+    color: white;
     margin-top: .8rem;
     font-weight: 400;
-    font-size: 1rem;
-    padding-right: 2rem;
+    font-size: 1.1rem;
+    /* padding-right: 2rem; */
+    text-decoration: none;
+    margin-right: .5rem;
+    padding-left: .4rem;
 }
+
+
+.cataloglink{
+    text-decoration: none;
+    /* padding-left: 1.5rem; */
+    margin-bottom: .5rem;
+}
+.cataloglink.active{
+    /* text-decoration: underline;
+    color: red;
+    text-decoration-thickness: 2px; */
+    border-width: 2rem;
+    border-bottom: 3px solid red;
+  }
 .side{
     display: none;
 }

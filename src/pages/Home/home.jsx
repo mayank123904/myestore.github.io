@@ -8,6 +8,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 // import ProductImage from '../../components/productimage';
 import ProductList from '../../components/allproducts';
 import Allproducts from '../../components/allproductslist';
+import Categories from '../../components/Categories/categories';
+import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
@@ -38,7 +40,7 @@ function Home() {
     <div className="featureproducts">
       <span>
       <h2>Featured Products</h2>
-      <h3>See All</h3>
+      <h3><Link to="/best-sellers" style={{textDecoration:"none",color:'red'}}>See All</Link></h3>
       </span>
       <hr style={{width:"88%",marginTop:"-.5rem",marginBottom:"1rem"}}></hr>
       {/* <div className='fpouter'> */}
@@ -58,7 +60,7 @@ function Home() {
     <div className="allproducts">
       <span>
       <h2>All Products</h2>
-      <h3>See All</h3>
+      <h3> <Link to="/all-products" style={{textDecoration:"none",color:'red'}}>See All</Link></h3>
       </span>
       <hr style={{width:"88%",marginTop:"-.5rem",marginBottom:"1rem"}}></hr>
       {/* <div className="ap">
@@ -77,7 +79,7 @@ function Home() {
       <hr style={{width:"88%",marginTop:"-.5rem",marginBottom:"1rem"}}></hr>
       {/* <ProductImage /> */}
      
-      
+      <Categories />
     </div>
     </>
   )

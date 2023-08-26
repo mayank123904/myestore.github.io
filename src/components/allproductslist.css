@@ -1,0 +1,9 @@
+.fp{
+    display: flex;
+    margin-left: 4%;
+    overflow-x: auto; /* Hide the scrollbar but keep the scrolling functionality */
+    /* white-space: nowrap; */
+ }
+ .fp::-webkit-scrollbar{
+   width: 0;
+ }

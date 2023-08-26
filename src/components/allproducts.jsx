@@ -24,7 +24,7 @@ const ProductList = () => {
       <ul style={{display:"flex",marginTop:"4rem"}}>
         {filteredProducts.map((product) => (
           <li key={product._id} >
-         <Featureproductcard productimage={productpic} productalt={product.productname} productname={product.productname} productdiscountprice={"$"+(product.actualprice-(product.actualprice*product.discountpercent)/100)} productactualprice={"$"+product.actualprice} productdiscountpercent={product.discountpercent+"%"}/> 
+         <Featureproductcard productimage={productpic} productalt={product.productname} productname={product.productname} productdiscountprice={"$"+(product.actualprice-(product.actualprice*product.discountpercent)/100)} productactualprice={"$"+product.actualprice} productdiscountpercent={product.discountpercent+"%"} producttag={product.tag}/> 
           </li>
         ))}
       </ul>

@@ -1,0 +1,21 @@
+.categorycontainer{
+    width:20rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 1rem;
+    height: fit-content;
+}
+.categorycontainer>div{
+    padding-left: 1rem;
+    cursor: pointer;
+    height: 2rem;
+    border: 1px solid black;
+    padding-bottom: .5rem;
+
+}
+.categorycontainer>div:hover{
+    background-color: rgb(206, 55, 0);
+}
+.categorycontainer>div>h3{
+   margin-top: .6rem;
+}

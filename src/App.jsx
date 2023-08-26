@@ -13,6 +13,12 @@ import Productdetail from './components/Productdetail/productdetail';
 import Addproduct from './components/Addproduct/addproduct';
 import Setlocation from './components/Setlocation/setlocation';
 import Cart from './components/Cart/cart';
+// import ProductList from './components/allproducts';
+// import Allproducts from './components/allproductslist';
+import Featureproductpage from './pages/Featuredproducts/featureproductspage';
+import Allproductspage from './pages/Allproducts/allproducts';
+import CategoryPage from './pages/Category/categorypage';
+import Address from './pages/Address/address';
 function App() {
   const {setUser,setIsAuthenticated,setLoading} = useContext(Context);
 
@@ -47,6 +53,10 @@ function App() {
     <Route exact path="/addproduct" element={<Addproduct/>}/>
     <Route exact path="/addlocation" element={<Setlocation/>}/>
     <Route exact path="/cart" element={<Cart/>}/>
+    <Route exact path="/best-sellers" element={<Featureproductpage/>} />
+    <Route exact path="/all-products" element={<Allproductspage/>} />
+    <Route exact path="/category/:categoryName"  element={<CategoryPage/>}  />
+    <Route exact path="/address"  element={<Address/>}  />
     </Routes>
     <Footer />
     <Toaster />
